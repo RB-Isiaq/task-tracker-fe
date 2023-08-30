@@ -19,7 +19,6 @@ const SignUp = ({ toggle }) => {
     try {
       const res = await postData("/auth/register", formData);
 
-      console.log(res);
       if (res.status === 201) {
         setSuccess(res.msg);
         setUserAuth({
@@ -36,8 +35,8 @@ const SignUp = ({ toggle }) => {
         setError(res.msg);
       }
     } catch (error) {
-      setError(error.message);
-      console.log(error);
+      setError("An error occurred, please try again.");
+      console.log(error.message);
     } finally {
       setSigning(false);
     }

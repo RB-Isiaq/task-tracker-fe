@@ -1,5 +1,5 @@
 const CACHE_NAME = "The-Movies";
-const urlsToCache = ["/", "/index.html", "/dashboard"];
+const urlsToCache = ["/", "index.html", "/dashboard"];
 
 const self = this;
 

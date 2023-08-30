@@ -42,7 +42,7 @@ const SignIn = ({ toggle }) => {
         });
       }
     } catch (error) {
-      setError(error.message);
+      setError("An error occurred, please try again.");
       console.log(error.message);
     } finally {
       setSigning(false);
@@ -93,7 +93,7 @@ const SignIn = ({ toggle }) => {
           </button>
         </div>
       </form>
-      {error && <p className="text-red-400">{error}</p>}
+      {error && <p className="text-red-400 text-center">{error}</p>}
       <p>
         Don't have an account?{" "}
         <span className="orange_gradient cursor-pointer" onClick={toggle}>

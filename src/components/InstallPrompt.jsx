@@ -33,7 +33,7 @@ export const InstallPrompt = () => {
   };
 
   return (
-    <div className="absolute bottom-0 right-0 mb-20 mr-6">
+    <div className="absolute bottom-0 right-0 mb-20 mr-6 cursor-pointer">
       {installPromptEvent && (
         <img src={Arrow} alt="install arrow" onClick={handleInstallClick} />
       )}

@@ -1,3 +1,4 @@
+import { InstallPrompt } from "../../components/InstallPrompt";
 import SignIn from "./sign-in";
 import SignUp from "./sign-up";
 import { useState } from "react";
@@ -34,6 +35,7 @@ const Home = () => {
       ) : (
         <SignUp toggle={toggleSignIn} />
       )}
+      <InstallPrompt />
     </section>
   );
 };
