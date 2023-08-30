@@ -1,0 +1,58 @@
+export const dummydata = [
+  {
+    id: 1,
+    title: "first task",
+    desc: "This is the first task that i was assigned to do today",
+    status: "Not started",
+    dueDate: "23/03/2023",
+  },
+  {
+    id: 2,
+    title: "second task",
+    desc: "This is the second task that i was assigned to do today",
+    status: "Not started",
+    dueDate: "27/03/2023",
+  },
+  {
+    id: 3,
+    title: "third task",
+    desc: "This is the third task that i was assigned to do today",
+    status: "Completed",
+    dueDate: "23/05/2023",
+  },
+  {
+    id: 4,
+    title: "fourth task",
+    desc: "This is the fourth task that i was assigned to do today",
+    status: "In progress",
+    dueDate: "23/03/2024",
+  },
+  {
+    id: 5,
+    title: "another task",
+    desc: "This is the fourth task that i was assigned to do today",
+    status: "In progress",
+    dueDate: "23/11/2022",
+  },
+  {
+    id: 6,
+    title: "a task",
+    desc: "This is the fourth task that i was assigned to do today",
+    status: "Completed",
+    dueDate: "01/01/2023",
+  },
+  {
+    id: 7,
+    title: "a new task",
+    desc: "This is the fourth task that i was assigned to do today",
+    status: "Completed",
+    dueDate: "01/09/2024",
+  },
+  {
+    id: 8,
+    title: "task",
+    desc: "This is the fourth task that i was assigned to do today",
+    status: "Not started",
+    dueDate: "11/01/2021",
+  },
+];
