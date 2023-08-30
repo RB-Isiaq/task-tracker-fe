@@ -2,7 +2,6 @@ import TaskCard from "./TaskCard";
 
 const Tasks = ({ sort, data }) => {
   let sortedData = data;
-  console.log(sortedData);
   if (sort === "title") {
     sortedData = data.sort((a, b) => {
       if (a.title < b.title) return -1;
@@ -40,6 +39,5 @@ const Tasks = ({ sort, data }) => {
     </div>
   );
 };
-
 
 export default Tasks;
