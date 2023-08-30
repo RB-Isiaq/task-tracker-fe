@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthCtx } from "../../../context/authContext";
 import { toast } from "react-toastify";
+import { postData } from "../../../services/ApiClient";
 
 const SignUp = ({ toggle }) => {
   const [error, setError] = useState(null);
@@ -16,22 +17,15 @@ const SignUp = ({ toggle }) => {
     const formData = Object.fromEntries(form.entries());
 
     try {
-      const res = await fetch("http://localhost:5000/api/v1/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const responseData = await res.json();
+      const res = await postData("/auth/register", formData);
 
+      console.log(res);
       if (res.status === 201) {
-        setSuccess(responseData.msg);
+        setSuccess(res.msg);
         setUserAuth({
-          token: responseData.token,
-          username: responseData.user.username,
-          msg: responseData.user.msg,
+          token: res.token,
+          username: res.user.username,
+          msg: res.user.msg,
         });
         toast.success(success, {
           position: toast.POSITION.TOP_RIGHT,
@@ -39,7 +33,7 @@ const SignUp = ({ toggle }) => {
         toggle();
       } else {
         console.log("Registration failed");
-        setError(responseData.msg);
+        setError(res.msg);
       }
     } catch (error) {
       setError(error.message);

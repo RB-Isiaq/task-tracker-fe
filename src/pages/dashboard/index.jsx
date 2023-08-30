@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Tasks from "../../components/Tasks";
 import { AuthCtx } from "../../context/authContext";
 import { getData } from "../../services/ApiClient";
@@ -11,7 +11,9 @@ const UserPage = () => {
   const [loading, setLoading] = useState(null);
   const [tasks, setTasks] = useState([]);
   const { userAuth } = useContext(AuthCtx);
+  const navigate = useNavigate();
 
+  !userAuth.token && navigate("/");
   useEffect(() => {
     setLoading(true);
     const fetchUserData = async () => {

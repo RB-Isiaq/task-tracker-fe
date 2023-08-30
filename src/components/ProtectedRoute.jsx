@@ -6,10 +6,7 @@ const ProtectedRoute = ({ children }) => {
   const { userAuth } = useContext(AuthCtx);
   const navigate = useNavigate();
 
-  if (!userAuth.token) {
-    console.log("PROTECTED");
-    navigate("/");
-  }
+  !userAuth.token && navigate("/");
 
   return children;
 };

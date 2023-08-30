@@ -21,7 +21,7 @@ const Home = () => {
         effortlessly.
       </p>
 
-      <p className="text-xl my-8">
+      <p className="text-xl my-4">
         Please{" "}
         <span className="orange_gradient">
           {signIn ? "sign in" : "sign up"}{" "}
